@@ -1,0 +1,651 @@
+:root{
+    --blue: #509CF7;
+}
+
+h1{
+    text-align: center;
+}
+
+#bodycitas{
+    padding: 3.5rem ;
+    background-color: lightgray;
+}
+
+#bodylogin{
+      margin: 0;
+    background-image: url("../imagenes/imagen1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+#bodycita{
+    background-color: #11d1f3ce;
+    font-family: Arial;
+}
+
+body{
+  overflow-x: hidden;
+  font-family:sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    transition: all .3s linear;
+    box-sizing: border-box;
+}
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    z-index: 1000;
+}
+
+.bars, .wrong{
+    display: none;
+    z-index: 10000;
+}
+
+.fa-bars, .fa-times{
+    font-size: 2rem;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li{
+    margin-right: 4rem;
+}
+
+nav ul li a{
+    color:#ffff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: var(--blue);
+}
+
+
+.header-active{
+    background: #333;
+    height: 6rem;
+    box-shadow: .2rem 0 .5rem #000;
+}
+
+.header-active nav ul{
+    margin: 0;
+}
+
+/*--------MENU--------*/
+/*Inicio: */
+#inicio{
+    background: linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.6));
+    position:relative;
+    padding: 15%;
+}
+
+.content h1{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .3rem #333;
+    color: var(--blue);
+}
+
+.content h2{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .3rem #333;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.content p{
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+button{
+    width: 14rem;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    color: #333;
+    background: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    background: var(--blue);
+    height: 100%;
+    width: 0%;
+    transition: .2s;
+    z-index: -1;
+}
+
+button:hover::before{
+    width: 100%;
+}
+
+
+/*video de fondo */
+.video-container{
+    position: absolute;
+    top: 0rem; left: 0rem;
+    height: 100vh;
+    width: 100%;
+    z-index:-1;
+}
+
+.video-container .vid{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.video-container .vid1{
+    display: block;
+}
+
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;}
+
+/*Como trabajamos:*/
+#comotrabajamos{
+    background: #000;
+    min-height: 100vh;
+    margin-top: -6rem;
+}
+
+.heading h1{
+    font-size: 4rem;
+    color: #fff;
+    padding-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.heading h1 span{
+    color: var(--blue);
+}
+
+.heading p{
+    color: #ccc;
+    font-size: 2rem;
+}
+
+.card-container{
+    width: 95%;
+    margin: 7rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: 40rem;
+    width: 30rem;
+    background:#f5f5f5;
+    padding: 1rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.card img{
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card p{
+    font-size: 1.4rem;
+    margin: 2rem 0;
+}
+
+.card:hover{
+    transform: scale(0.9);
+}
+
+/*Sobre nosotros: */
+#sobreNosotros{
+    text-align: center;
+}
+ 
+#sobreNosotros .heading h1{
+    color: var(--blue); 
+}
+
+#sobreNosotros .heading h1 span{
+    color: #000;
+}
+
+#sobreNosotros .content{
+    margin: 5rem auto;
+}
+
+#sobreNosotros .content p{
+    font-size: 1.5rem;
+}
+
+#sobreNosotros .content button{
+    margin: 5rem auto;
+    height: 4rem;
+    width: 14rem;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    }
+
+#sobreNosotros .content button:hover{
+    color: #333333;
+}
+
+/*Tratamietos:*/
+#tratamientos{
+    min-height: 100vh;
+    width: 100vw;
+}
+
+#tratamientos .heading h1{
+    color: #000;
+}
+
+#tratamientos .heading span{
+    color: var(--blue);
+}
+
+.box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.box-container .box{
+    height: 20rem;
+    width: 25rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 .5rem #333;
+    margin: 2rem;
+}
+
+.box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box-container .inf{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(51,51,51, .6);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: #fff;
+    transform: scale(0);
+}
+
+.box-container .inf h3{
+    font-size: 2rem;
+}
+
+.box-container .inf p{
+    font-size: 1rem;
+    border-bottom: .2rem double var(--blue);
+    border-top: .2rem dotted var(--blue);
+    margin: 1rem 2rem;
+}
+
+.box-container .box:hover .inf{
+    transform: scale(1);
+}
+
+/*Contacto:*/
+#contacto{
+    min-height: 100vh;
+    width: 100vw;
+    background: url("../imagenes/fondocontacto.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#contacto .row{
+    margin:auto;
+}
+
+#contacto form{
+    background: #fff;
+    padding-top: 2rem;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0 2rem #333;
+    box-shadow: 0 0 2rem #333;
+}
+
+#contacto form .inputBox{
+    position: relative;
+    text-align: center;
+}
+
+#contacto form .inputBox input, textarea {
+    outline: none;
+    border: .1rem solid #333;
+    border-radius: .2rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    background: none;
+    height: 3rem;
+    width: 90%;
+    font-size: .5rem;
+}
+
+#contacto form .inputBox input:focus ~ h3,
+#contacto form .inputBox input:valid ~ h3, 
+#contacto form .inputBox textarea:focus ~ h3,
+#contacto form .inputBox textarea:valid ~ h3 {
+    font-size: 1rem;
+    left: 6%;
+    top: -.5rem;
+    color: var(--blue);
+}
+
+.inputBox textarea{
+    padding: 1rem;
+    resize: none;
+    height: 20rem;
+}
+
+.inputBox h3{
+    position: absolute;
+    top: 3rem; left: 7%;
+    font-size: 1rem;
+}
+
+form input[type="submit"]{
+    height: 3rem;
+    width: 9rem;
+    margin-bottom: 2rem;
+    margin-left: 4%;
+    border: none;
+    border-radius: 2rem;
+    background: #333;
+    color: #fff;
+}
+
+form input[type="submit"]:hover{
+    color: #333;
+    background: var(--blue);
+}
+
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 50%;
+    }
+
+    .bars, .wrong{
+        display: block;
+    }
+
+    nav{
+        position: fixed;
+        top: 0; left: -120%;
+        height: 100vh;
+        width: 35rem;
+        background: #000;
+    }
+
+    nav ul{
+        flex-flow: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    nav ul li{
+        margin: 2rem 0;
+    }
+
+    nav ul li a{
+        font-size: 2.5rem;
+        border-radius: 5rem;
+    }
+
+    nav ul li a:hover{
+        padding: .5rem 7.5rem;
+        color: #333333;
+        background: var(--blue);
+    }
+
+    .nav-toggle{
+        left: 0;
+    }
+}
+/*LOGIN HTML*/
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+.formulario{
+    background: #fff;
+    margin-top: 150px;
+    padding: 3px;
+}
+#h1Login{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+}
+
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+
+
+.link:hover{
+     color: cadetblue;
+}
+.link{
+    text-decoration: none;
+      color: #1a2537;
+    font-weight: 600;
+}
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 500px;
+        margin-top: 150px;
+        border-radius: 2%;
+    }
+}
+
+/*CITAS HTML*/
+
+#formcitas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 800px;
+    margin-top: 2.8rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#main-container{
+    margin: 150px auto;
+    width: 600px;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+
+    width: 14rem;
+    margin: 0.5rem 0;
+}
+
+.field label{
+    font-size: 0.9rem;
+
+    margin-bottom: 0.2rem;
+
+    color: #696969;
+}
+
+.field input{
+    font-size: 1.1rem;
+
+    height: 2.2rem;
+    padding-left: 0.5rem;
+
+    border: 2px solid #696969;
+    border-radius: 5px;
+}
+
+.field select{
+    font-size: 1.1rem;
+
+    width: 12rem;
+    height: 2.6rem;
+    padding-left: 0.5rem;
+
+    border: 2px solid #696969;
+    border-radius: 5px;
+}
+
+.textBox{
+    display: flex;
+    flex-direction: column;
+
+    width: 25rem;
+    margin: 0.75rem 0;
+}
+
+textarea{
+    font-size: 1.1rem;
+
+    max-width: 100%;
+    height: 5rem;
+    max-height: 15rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+
+    border: 2px solid #696969;
+    border-radius: 5px;
+}
+
+.textBox label{
+    font-size: 0.9rem;
+
+    margin-bottom: 0.2rem;
+
+    color: #696969;
+}
+
+.gustos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 20rem;
+    margin: 0.75rem 0;
+}
+
+.gustos label{
+    font-size: 0.9rem;
+
+    margin-bottom: 0.2rem;
+
+    color: #696969;
+}
+
+.gustos div{
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    padding-left: 0.5rem;
+}
+
+.gustos div input{
+    width: 1rem;
+    height: 1rem;
+}
+table{
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    padding: 20px;
+}
+
+thead{
+    background-color: #3e6da3;
+    border-bottom: solid 5px #fbfcfb;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover td{
+    background-color: #49a2b8;
+    color: white;
+}

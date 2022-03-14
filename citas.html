@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+	<meta charset="UTF-8">
+ 	<link rel="stylesheet" href="css/css.css">
+	<title>Citas</title>
+</head>
+
+<body id="bodycitas">
+	<header id="header" class="header-active">
+    <nav>
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+        </ul>
+    </nav>
+    <div class="bars"><i class="fas fa-bars"></i></div>
+</header>
+	<main >
+		<form id="formcitas">
+			<div class='field'>
+				<label>Nombre y Apellidos</label>
+				<input name='nombreapellidos' type='name' autocomplete />
+			</div>
+			<div class='field'>
+				<label>DNI</label>
+				<input name='dni' type='name' autocomplete />
+			</div>
+			<div class='field'>
+				<label>Tratamiento</label>
+				<select name='estadoLaboral' required>
+					<option selected disabled>Sel. una opción</option>
+					<option>Implantes dentales</option>
+					<option>Ortodoncia</option>
+					<option>Endodoncia</option>
+					<option>Periodoncia</option>
+					<option>Estetica</option>
+					<option>Regeneracion Osea</option>
+				</select>
+			</div>
+			<div class='field'>
+				<label>Fecha</label>
+				<input name='fecha' type='date' min="2022/03/05" max="2022/12/31" step="2"/>
+			</div>
+			<div class='field'>
+				<label>Hora</label>
+				<input name='hora' type='time' min="8:00" max="20:00" step="3600" />
+			</div>
+			<div class='field'>
+				<label>Teléfono</label>
+				<input name='Telefono' type='telefono'  required value="+34" autocomplete />
+			</div>
+			<div class='textBox'>
+				<label>Motivo para la cita</label>
+				<textarea></textarea>
+			</div>
+			<div class='gustos'>
+				<label>¿Quieres recibir tu cita por SMS?</label>
+				<div><input name='gustos' type='radio' />Sí</div>
+				<div><input name='gustos' type='radio' />No</div>
+			</div>
+			<button type="reset" onclick="location.href='index.html'">Solicitar </button>
+		</form>
+	</main>
+</body>
+
+</html>
