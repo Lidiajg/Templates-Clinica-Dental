@@ -1,40 +1,45 @@
 :root{
     --blue: #509CF7;
+    --white: #fff;
 }
-
-h1{
-    text-align: center;
-}
-
-#bodycitas{
-    padding: 3.5rem ;
-    background-color: lightgray;
-}
-
+/*---------------------BODYS--------------------*/
 #bodylogin{
-      margin: 0;
+    margin: 0;
     background-image: url("../imagenes/imagen1.jpg");
     background-size: cover;
     background-attachment: fixed;
+    text-align: center;
+}
+#bodycitas{
+    padding: 3.5rem ;
+    background-color: lightgray;
+    text-align: center;
 }
 #bodycita{
     background-color: #11d1f3ce;
     font-family: Arial;
+    text-align: center;
 }
 
+/*CARACTERISTICAS DEL HTML EN GENERAL: letras y posiciones*/
 body{
-  overflow-x: hidden;
-  font-family:sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
+    overflow-x: hidden;
+    font-family:sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
 }
+
 *{
     margin: 0; padding: 0;
     box-sizing: border-box;
     transition: all .3s linear;
     box-sizing: border-box;
 }
+
+
+/*CARACTERISTICAS DEL MENU*/
 #header{
     width: 100%;
     position: fixed;
@@ -45,19 +50,6 @@ body{
     padding: 2rem 4rem;
     z-index: 1000;
 }
-
-.bars, .wrong{
-    display: none;
-    z-index: 10000;
-}
-
-.fa-bars, .fa-times{
-    font-size: 2rem;
-    color: var(--blue);
-    cursor: pointer;
-}
-
-
 
 nav ul{
     display: flex;
@@ -71,7 +63,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color:#ffff;
+    color:var(--white);
     font-size: 1rem;
     text-decoration: none;
 }
@@ -80,38 +72,31 @@ nav ul li a:hover{
     color: var(--blue);
 }
 
-
 .header-active{
     background: #333;
-    height: 6rem;
+    height: 5.5rem;
     box-shadow: .2rem 0 .5rem #000;
 }
 
-.header-active nav ul{
-    margin: 0;
-}
 
-/*--------MENU--------*/
+/*--------MENU SECTION--------*/
 /*Inicio: */
 #inicio{
+    background-image:url("./imagenes/VideoPresentacion.mp4"); 
     background: linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.6));
     position:relative;
-    padding: 15%;
+    padding: 16%;
 }
+
 
 .content h1{
     font-size: 3.5rem;
-    font-weight: bolder;
-    text-shadow: .1rem .1rem .3rem #333;
     color: var(--blue);
 }
 
 .content h2{
     font-size: 2.5rem;
-    font-weight: bolder;
-    text-shadow: .1rem .1rem .3rem #333;
-    color: #fff;
-    margin: 1rem 0;
+    color: var(--white);
 }
 
 .content p{
@@ -123,14 +108,12 @@ button{
     width: 14rem;
     height: 2.5rem;
     outline: none;
-    border: none;
+    border: 1px solid #aaa;
     border-radius: 5rem;
     color: #333;
-    background: #fff;
+    background: var(--white);
     font-weight: bold;
-    text-transform: capitalize;
     letter-spacing: .2rem;
-    cursor: pointer;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -154,15 +137,15 @@ button:hover::before{
 
 /*video de fondo */
 .video-container{
-    position: absolute;
+    position: fixed;
     top: 0rem; left: 0rem;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index:-1;
 }
 
 .video-container .vid{
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100%;
     object-fit: cover;
@@ -173,22 +156,24 @@ button:hover::before{
     display: block;
 }
 
+.container, .container-fluid{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;}
-
-/*Como trabajamos:*/
+/*Como trabajamos: */
 #comotrabajamos{
-    background: #000;
+    background: black;
     min-height: 100vh;
     margin-top: -6rem;
+    padding: 4rem;
 }
+
 
 .heading h1{
     font-size: 4rem;
-    color: #fff;
+    color: var(--white);
     padding-top: 5rem;
     margin-bottom: 2rem;
 }
@@ -212,8 +197,8 @@ button:hover::before{
 }
 
 .card{
-    height: 40rem;
-    width: 30rem;
+    height: 41rem;
+    width: 31rem;
     background:#f5f5f5;
     padding: 1rem;
     margin: 2rem;
@@ -232,14 +217,17 @@ button:hover::before{
 }
 
 .card:hover{
-    transform: scale(0.9);
+    transform: scale(0.8);
 }
+
 
 /*Sobre nosotros: */
 #sobreNosotros{
-    text-align: center;
+    background: white;
+    min-height: 100vh;
+    padding: 5.5rem;
 }
- 
+
 #sobreNosotros .heading h1{
     color: var(--blue); 
 }
@@ -261,7 +249,7 @@ button:hover::before{
     height: 4rem;
     width: 14rem;
     background: #333;
-    color: #fff;
+    color: var(--white);
     text-align: center;
     }
 
@@ -269,20 +257,23 @@ button:hover::before{
     color: #333333;
 }
 
+
 /*Tratamietos:*/
 #tratamientos{
+    background:white;
     min-height: 100vh;
     width: 100vw;
+    padding: 0.1rem;
 }
 
 #tratamientos .heading h1{
     color: #000;
+    padding-top: 2rem;
 }
 
 #tratamientos .heading span{
     color: var(--blue);
 }
-
 .box-container{
     display: flex;
     align-items: center;
@@ -319,7 +310,7 @@ button:hover::before{
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    color: #fff;
+    color: var(--white);
     transform: scale(0);
 }
 
@@ -340,11 +331,13 @@ button:hover::before{
 
 /*Contacto:*/
 #contacto{
-    min-height: 100vh;
-    width: 100vw;
     background: url("../imagenes/fondocontacto.jpg");
     background-size: cover;
     background-position: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 4.5rem;
+
 }
 
 #contacto .row{
@@ -352,14 +345,13 @@ button:hover::before{
 }
 
 #contacto form{
-    background: #fff;
+    background: var(--white);
     padding-top: 2rem;
     margin: 1rem 2rem;
     border-radius: 1rem;
     -webkit-box-shadow: 0 0 2rem #333;
     box-shadow: 0 0 2rem #333;
 }
-
 #contacto form .inputBox{
     position: relative;
     text-align: center;
@@ -407,15 +399,15 @@ form input[type="submit"]{
     border: none;
     border-radius: 2rem;
     background: #333;
-    color: #fff;
+    color: var(--white);
 }
 
 form input[type="submit"]:hover{
     color: #333;
     background: var(--blue);
 }
-
-
+/*RESPONSIVE*/
+/* 
 @media screen and (max-width: 768px){
     html{
         font-size: 50%;
@@ -457,21 +449,29 @@ form input[type="submit"]:hover{
     .nav-toggle{
         left: 0;
     }
-}
-/*LOGIN HTML*/
-.contenedor{
-    width: 100%;
-    padding: 15px;
-}
-.formulario{
-    background: #fff;
+} */
+
+/*--------LOGIN HTML--------*/
+/*Login: */
+.form{
+    background: var(--white);
     margin-top: 150px;
-    padding: 3px;
+    padding: 8px;
+    margin: auto;
+    width: 520px;
+    margin-top: 155px;
+    border-radius: 2%;
 }
+
 #h1Login{
     text-align: center;
     color: #1a2537;
     font-size: 40px;
+}
+
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
 }
 
 input[type="text"],
@@ -481,25 +481,18 @@ input[type="password"]{
     padding: 10px;
     border: none;
 }
-.input-contenedor{
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
-}
-.icon{
-    min-width: 50px;
-    text-align: center;
-    color: #999;
-}
 
-
+/*Login Administrador: */
 .link:hover{
-     color: cadetblue;
+     color:  var(--blue);
 }
 .link{
     text-decoration: none;
-      color: #1a2537;
+    color: #1a2537;
     font-weight: 600;
 }
+/*RESPONSIVE lo pongo sin media*/
+/*
 @media(min-width:768px)
 {
     .formulario{
@@ -509,6 +502,9 @@ input[type="password"]{
         border-radius: 2%;
     }
 }
+*/
+
+/*-------------------LIMPIAR CODIGO:--------------------*/
 
 /*CITAS HTML*/
 

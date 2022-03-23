@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+  }
+  /*MAIN*/
+  .main{
+    background: #588484;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /*container*/
+  .container{
+    background-image: url('http://www.walldevil.com/wallpapers/a77/pattern-tetris.jpg');
+    background-repeat: repeat;
+    background-size: 100%;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+    box-shadow: 3px 3px 10px #000;
+  }
+  
+  .main h2{
+    font-family: 'Berkshire Swash', cursive;
+    color: #f7c5d9;
+    font-size: 200%;
+    text-shadow: 3px 3px 2px #000;
+  }
+  
+  /*FORM*/
+  .main form{
+    background-color: rgba(0,0,0,0.8);
+    text-align: left;
+    padding: 20px;
+    font-size: 1.3em;
+    
+      
+  }
+  
+  /*input*/
+  .cajas{
+    border-radius: 5px;
+    
+    margin: 15px 0;
+    background-color: #93BBBB;
+    border: 2px solid #fff;
+  }
+  
+  .cajas:hover{
+    background-color: #A7C1C0;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 6px #fff;
+  }
+  
+  /*botón*/
+  .btn{
+    height: 40px;
+    padding: 10px 40px;
+    border-radius: 7px;
+    background-color: #000;
+    color: #9ABCBD;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 0;
+  }
+  
+  .btn:hover{
+    box-shadow: 3px 3px 5px #000;
+    background-color: #FE0069;
+    color: #000;
+  }
