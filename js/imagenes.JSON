@@ -1,0 +1,24 @@
+var imagenes =
+[
+
+	{
+		'url' : 'imagenes/estudiodecaso.jpg',
+		'Desc' : 'Imagen estudio de casos.'
+	},
+
+	{
+		'url' : './imagenes/tratamientopersonalizado.jpg',
+		'Desc' : 'Imagen tratamiento personalizado'
+	},
+
+	{
+		'url' : './imagenes/seguimiento.jpg',
+		'Desc' : 'Imagen seguimiento'
+	},
+
+	{
+		'url' : './imagenes/calidad.jpg',
+		'Desc' : 'Imagen calidad'
+	}
+	
+]

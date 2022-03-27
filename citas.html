@@ -3,19 +3,21 @@
 
 <head>
 	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
  	<link rel="stylesheet" href="css/css.css">
 	<title>Citas</title>
 </head>
 
 <body id="bodycitas">
 	<header id="header" class="header-active">
-    <nav>
+    <i class="fas fa-bars" id="btn_menu"></i>
+    <div id="back_menu"></div>
+    <nav id="nav">
         <ul>
             <li><a href="index.html">INICIO</a></li>
             <li><a href="login.html">LOGIN</a></li>
         </ul>
     </nav>
-    <div class="bars"><i class="fas fa-bars"></i></div>
 </header>
 	<main >
 		<form id="formcitas">
@@ -63,6 +65,6 @@
 			<button type="reset" onclick="location.href='index.html'">Solicitar </button>
 		</form>
 	</main>
+	 <script src="js/menu-main.js"></script>
 </body>
-
 </html>

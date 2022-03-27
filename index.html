@@ -1,15 +1,21 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <link rel="stylesheet" href="css/css.css">
     <title>Clinica dental</title>
 </head>
 
 <body>
 <header id="header" class="header-active">
-    <nav>
+    <i class="fas fa-bars" id="btn_menu"></i>
+    <div id="back_menu"></div>
+    <nav id="nav">
         <ul>
             <li><a href="#inicio">INICIO</a></li>
             <li><a href="#comotrabajamos">COMO TRABAJAMOS</a></li>
@@ -19,7 +25,6 @@
             <li><a href="#contacto">CONTACTO</a></li>
         </ul>
     </nav>
-    <div class="bars"><i class="fas fa-bars"></i></div>
 </header>
 
 <section id="inicio" class="container-fluid">
@@ -45,28 +50,28 @@
 
     <div class="card-container">
         <div class="card">
-            <img src="./imagenes/estudiodecaso.jpg" alt="estudiodecaso">
+            <img id="estudioCaso" src="" alt="estudiodecaso">
             <p>
                 ESTUDIO DE CASO<br>La primera vez que acude a nuestra consulta, el paciente es sometido a una exhaustiva exploración buco-dental mediante radiografías, modelos y fotos para establecer un diagnóstico y proporcionarle las opciones de tratamiento más adecuadas.
             </p>
         </div>
 
         <div class="card">
-            <img src="./imagenes/tratamientopersonalizado.jpg" alt="tratamientopersonalizado">
+            <img id="tratamientoPersonalizado" src="" alt="tratamientopersonalizado">
             <p>
                 TRATAMIENTO PERSONALIZADO<br> El paciente, perfectamente infrmado de las distintas posibilidades tras el estudio de su caso, es el que toma la decisión final, con el asesoramiento y ayuda de nuestro equipo. 
             </p>
         </div>
 
         <div class="card">
-            <img src="./imagenes/seguimiento.jpg" alt="seguimiento">
+            <img id="seguimiento" src="" alt="seguimiento">
             <p>
                 SEGUIMIENTO<br>En función del tipo de patología, establecemos un protocolo de citas de revisión para garantizar la correcta evolución del tratamiento y controlar el mantenimiento de los resultados obtenidos.
             </p>
         </div>
 
         <div class="card">
-            <img src="./imagenes/calidad.jpg" alt="calidad">
+            <img id="calidad" src="" alt="calidad">
             <p>
                 CALIDAD<br>Conscientes de la importancia de ofrecer a nuestros pacientes los mejores servicios, tratamientos y técnicas, nuestro esfuerzo por lograr la máxima calidad se traduce en una inversión constante en dos pilares: la formación continua de nuestros profesionales y la aparatología de última generación.
             </p>
@@ -179,6 +184,10 @@
         </form>
     </div>
 </section>
-
+ <script src="js/menu-main.js"></script>
+ <script src="js/jquery.js"></script>
+ <script src="js/bootstrap.min.js"></script> 
+ <script src="js/imagenes.json"></script>
+ <script src="js/guardaDatosJSON.js"></script> 
 </body>
 </html>

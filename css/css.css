@@ -1,6 +1,7 @@
 :root{
     --blue: #509CF7;
     --white: #fff;
+    --black: #000000;
 }
 /*---------------------BODYS--------------------*/
 #bodylogin{
@@ -76,6 +77,10 @@ nav ul li a:hover{
     background: #333;
     height: 5.5rem;
     box-shadow: .2rem 0 .5rem #000;
+}
+
+#btn_menu{
+    display: none;
 }
 
 
@@ -451,59 +456,6 @@ form input[type="submit"]:hover{
     }
 } */
 
-/*--------LOGIN HTML--------*/
-/*Login: */
-.form{
-    background: var(--white);
-    margin-top: 150px;
-    padding: 8px;
-    margin: auto;
-    width: 520px;
-    margin-top: 155px;
-    border-radius: 2%;
-}
-
-#h1Login{
-    text-align: center;
-    color: #1a2537;
-    font-size: 40px;
-}
-
-.input-contenedor{
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
-}
-
-input[type="text"],
-input[type="password"]{
-    font-size: 20px;
-    width: 82%;
-    padding: 10px;
-    border: none;
-}
-
-/*Login Administrador: */
-.link:hover{
-     color:  var(--blue);
-}
-.link{
-    text-decoration: none;
-    color: #1a2537;
-    font-weight: 600;
-}
-/*RESPONSIVE lo pongo sin media*/
-/*
-@media(min-width:768px)
-{
-    .formulario{
-        margin: auto;
-        width: 500px;
-        margin-top: 150px;
-        border-radius: 2%;
-    }
-}
-*/
-
 /*-------------------LIMPIAR CODIGO:--------------------*/
 
 /*CITAS HTML*/
@@ -644,4 +596,72 @@ tr:nth-child(even){
 tr:hover td{
     background-color: #49a2b8;
     color: white;
+}
+/*RESPONSIVE*/
+
+@media screen and (max-width: 928px){
+    /*Cambiamos el fondo y las letras del section inicio*/
+    #inicio{
+    background: var(--blue);
+    }
+
+    .content h1{
+    font-size: 3.5rem;
+    color: var(--black);
+    }
+
+    #bodylogin{
+    background: var(--blue);
+
+    }
+
+    /*Cambiamos el formato del menu:*/
+    /* Lo ponemos para el lado izq*/
+    nav{
+        position: fixed;
+        top: 0; left: -250px;
+        height: 100vh;
+        width: 240px;
+        background: #333;  
+        z-index: 1;
+        transition: all 300ms;
+    } 
+    /*Como teniamos puesto display: flex; lo cual hace que este el texto uno al aldo del otro ponemos esto que lo ponen uno debajo del otro */
+    nav ul{
+    flex-direction: column;
+
+    }
+    /*Como teniamos puesto display: flex; lo cual hace que este el texto uno al aldo del otro ponemos esto que lo ponen uno debajo del otro */
+    nav ul li{
+    margin-top: 35px;
+    margin-right: 0;
+    }
+    /*Creamos un div en html para que quede por encima este menu nuevo*/
+       #back_menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        display: none;
+    }
+    
+     #btn_menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 24px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+
+    #btn_menu:hover{
+        background: rgba(255, 255, 255, 0.2);
+    }
+
 }

@@ -1,39 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title></title> 
-    <link rel="stylesheet" href="css/css.css">
-</head>  
-
+    <meta charset="UTF-8">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>  
+   
+    <link rel="stylesheet" href="css/css.css"> 
+    <link rel="stylesheet" href="css/login-style.css"> 
+    
+    <title>Login</title>
+</head>
 <body id="bodylogin" >
 <header id="header" class="header-active">
-    <nav>
+    <i class="fas fa-bars" id="btn_menu"></i>
+    <div id="back_menu"></div>
+    <nav id="nav">
         <ul>
             <li><a href="index.html">INICIO</a></li>
-            <li><a href="registrar.html">REGISTRO</a></li>
         </ul>
     </nav>
-    <div class="bars"><i class="fas fa-bars"></i></div>
 </header>
+    <div class="login-page">
+        <div id="alert"></div>
+        <div id="alertIntentos"></div>
+        <div class="form">
+            <form action="#" class="register-form" >
+                <input type="text" placeholder="Ingrese un Nombre" id="nuevousuario" required/>
+                <input type="password" placeholder="Ingrese nueva contraseña" id="nuevacontraseña" required/>
+                <input type="password" placeholder="Confirme contraseña" id="confirmacontra" required/>
+                <input type="text" placeholder="Correo electronico" id="correoelectronico" required/>
+                <button id="btncrearusuario" type="submit">Crear cuenta</button>
+                <p class="message">Si ya te registraste <a href="#">inicia sesion</a></p>
+            </form>
+            <form action="#" class="login-form" >
+                <input type="text" placeholder="Nombre de usuario" id="usuario"/>
+                <input type="password" placeholder="contraseña" id="contraseña"/>
+                <button id="btniniciarsesion" >Iniciar sesion</button>
+                <p class="message">Si no tienes cuenta crea <a href="#"> aqui</a></p>
+            </form>
+        </div>
+    </div>    
 
-    <form class="form">
-    <h1 id="h1Login">Login</h1>
-     <div class="container">
-         <div class="input-contenedor">
-         <input type="text" placeholder="DNI">
-         </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="js/login-main.js"></script>
+    <script src="js/menu-main.js"></script>
 
-         <div class="input-contenedor">
-         <input type="password" placeholder="Contraseña">
-         </div>
-
-         <button type="reset" onclick="location.href='citas.html'">Login </button>
-         <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-         <button type="reset" onclick="location.href='Detallescita.html'">Login Administrador </button> 
-     </div>
-    </form>
-
-</body>
 </html>
